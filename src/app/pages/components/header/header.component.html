@@ -1,28 +1,40 @@
-<div class="tw-bg-primary tw-w-full">
+<div class="tw-bg-primary tw-w-full tw-h-[72px]">
 
-    <div class="tw-flex tw-justify-between tw-items-center tw-py-2 tw-px-10">
-        <div class="tw-flex tw-items-center tw-gap-8">
-            <img class="tw-cursor-pointer tw-h-14" src="../../../../assets/img/Logo.png" alt="Logo da barbearia">
+    <div class="tw-flex tw-justify-between tw-items-center lg:tw-py-4 tw-py-2 tw-px-5 lg:tw-px-14">
+        <div class="tw-flex tw-items-center lg:tw-gap-8 tw-gap-4">
+            <img class="tw-cursor-pointer tw-h-10 lg:tw-h-24" src="../../../../assets/img/Logo.png" alt="Logo da barbearia">
     
-            <div class="tw-gap-7 tw-flex">
-                <span class="tw-cursor-pointer tw-text-white tw-text-base tw-font-sans">
+            <div class="lg:tw-gap-7 tw-gap-4 tw-flex">
+                <span class="tw-cursor-pointer tw-text-white lg:tw-text-3xl tw-font-sans">
                     Sobre
                 </span>
     
-                <span class="tw-cursor-pointer tw-text-white tw-text-base tw-font-sans">
+                <span class="tw-cursor-pointer tw-text-white lg:tw-text-3xl tw-font-sans">
                     Serviços
                 </span>
-    
             </div>
         </div>
     
-        <div class="tw-flex tw-items-center tw-gap-4">
-            <p class="tw-text-white tw-text-base tw-font-sans tw-hidden lg:tw-flex">Pedro Tomilhero</p>
+        <div *ngIf="isUser;else notUser" class="tw-flex tw-items-center tw-gap-4">
+            <p class="tw-text-white tw-text-3xl tw-font-sans tw-hidden lg:tw-flex">Pedro Tomilhero</p>
 
             <button class="tw-w-14 tw-h-14 tw-bg-white tw-rounded-full">
 
             </button>
         </div>
+
+        <ng-template #notUser>
+
+            <button (click)="login()" class="lg:tw-flex tw-hidden buttons">
+                Entrar
+            </button>
+
+            <span (click)="login()" class="lg:tw-hidden tw-cursor-pointer tw-text-white lg:tw-text-2xl tw-font-sans">
+                Entrar
+            </span>
+        </ng-template>
+   
+
     </div>
 
 

@@ -1,12 +1,12 @@
 <div  class="tw-flex tw-flex-col lg:tw-flex-row tw-justify-between tw-items-center">
-    <div *ngFor="let servico of servicos" class="shadow-card tw-max-w-[320px] tw-h-[370px]">
+    <div *ngFor="let servico of servicos" class="shadow-card tw-max-w-[300px] tw-h-[350px]">
 
-        <img class="tw-w-full tw-h-[300px] tw-rounded-t-lg" src="../../../../assets/img/{{servico.urlImg}}.png" alt="Foto corte de cabelo">
+        <img class="tw-w-full tw-h-[280px] tw-rounded-t-lg" src="../../../../assets/img/{{servico.urlImg}}.png" alt="Foto corte de cabelo">
     
     
         <div class="tw-flex tw-justify-between tw-p-3 tw-items-center tw-bg-white tw-rounded-b-lg">
-            <p class="tw-text-black tw-text-base tw-font-bold tw-font-sans">{{servico.title}}</p>
-            <span class="tw-rounded-lg tw-py-1 tw-px-2 tw-bg-primaryDark tw-font-sans tw-text-sm tw-text-white">
+            <p class="tw-text-black tw-text-[16px] tw-font-bold tw-font-sans">{{servico.title}}</p>
+            <span class="tw-rounded-lg tw-py-1 tw-px-2 tw-bg-primaryDark tw-font-sans tw-text-[14px] tw-text-white">
                 {{servico.price | moneyMask}}
             </span>
         </div>
