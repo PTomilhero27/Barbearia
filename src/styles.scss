@@ -2,3 +2,16 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+
+.buttons {
+    border-radius: 8px;
+    background-color: #F0B35B;
+    padding: 9px 50px;
+    font-size: 16px;
+    color: black;
+
+    &:hover {
+        background-color: #D89D45;
+    }
+}
